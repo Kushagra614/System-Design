@@ -12,29 +12,29 @@ private:
     string email;
 
 public:
-    // Responsibility 1: Manage User Data
+    
     void setUserData(int userId, string userName, string userEmail) {
         cout << "User data set: " << name << endl;
     }
 
-    // Responsibility 2: Validate User Data
+    
     void validateUserData() {
         cout << "User data validated" << endl;
     }
 
-    // Responsibility 3: Save to Database
+    
     void saveToDatabase() {
         cout << "Saving user " << name << " to database..." << endl;
         // File operations
         cout << "User saved to DB" << endl;
     }
 
-    // Responsibility 4: Display User
+    
     void displayUser() {
         cout << "ID: " << id << ", Name: " << name << ", Email: " << email << endl;
     }
 
-    // Responsibility 5: Send Email Notification
+    
     void sendWelcomeEmail() {
         cout << "Sending welcome email to " << email << "..." << endl;
         cout << "Email sent!" << endl;
