@@ -2,7 +2,7 @@
 
 This principle states that "Software entities (classes, modules, functions, etc.) should be open for extension, but closed for modification," which means you should be able to extend a class's behavior without modifying it.
 
-You should be able to change the behavior of a class without changing its source code. You can do this through polymorphism and interfaces or abstract classes.
+You should be able to change the behavior of a class without changing its source code. You can do this through polymorphism and abstract classes.
 
 - **Open for extension** means that the behavior of a software module such as a class or a function can be extended without altering its source code.
 - **Closed for modification** means that once a module is written and tested, it should not be modified. Instead, new behavior should be added in a way that doesn't impact existing code.
@@ -13,7 +13,7 @@ You should be able to change the behavior of a class without changing its source
 In a traditional payment system without OCP, the main payment handler class contains if/else branching logic to handle different payment types (UPI, Card, Cash, etc.). When a new payment method needs to be added, the existing payment handler class must be modified and re-tested, increasing the risk of breaking existing functionality.
 
 ### With OCP (Follows the principle)
-By using an abstract base class or interface for payment methods, each payment type (UPI, Card, Cash, Wallet, etc.) becomes a separate concrete implementation. The main payment processor delegates to the appropriate payment method through polymorphism. To add a new payment option, you simply create a new class that implements the payment interface—no changes to existing classes are needed.
+By using an abstract base class for payment methods, each payment type (UPI, Card, Cash, Wallet, etc.) becomes a separate concrete implementation. The main payment processor delegates to the appropriate payment method through polymorphism. To add a new payment option, you simply create a new class that implements the payment interface—no changes to existing classes are needed.
 
 ## Benefits of Using OCP:
 
